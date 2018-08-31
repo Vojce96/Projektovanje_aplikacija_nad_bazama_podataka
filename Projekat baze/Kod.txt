@@ -1,0 +1,69 @@
+public void FillDataGrid()
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlDataAdapter adapter = new SqlDataAdapter("[dbo].[PingPongViewOrSearch]", conn);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            adapter.SelectCommand.Parameters.AddWithValue("@ImeIgraca", txtSearch.Text.Trim());
+            
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            gridViewContacts.DataSource = dt;
+            gridViewContacts.Columns[0].Visible = false;
+            conn.Close();
+        }
+        public void Reset()
+        {
+            txtName.Text = string.Empty;
+            btnSave.Text = "Save";
+            Id = 0;
+            btnDelete.Enabled = false;
+        }
+
+SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                if (btnSave.Text == "Save")
+                {
+                    SqlCommand sqlCmd = new SqlCommand("[dbo].[PingPongAddOrEdit]", conn);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@Mode", "Add");
+                    sqlCmd.Parameters.AddWithValue("@Id", 0);
+                    sqlCmd.Parameters.AddWithValue("@ImeIgraca", txtName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Poena", txtMobileNumber.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Saved successfully");
+                    Reset();
+                    FillDataGrid();
+                }
+                else
+                {
+                    SqlCommand sqlCmd = new SqlCommand("[dbo].[PingPongAddOrEdit]", conn);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@Mode", "Edit");
+                    sqlCmd.Parameters.AddWithValue("@Id", Id);
+                    sqlCmd.Parameters.AddWithValue("@ImeIgraca", txtName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Poena", txtMobileNumber.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Updated succesfully");
+                    Reset();
+                    FillDataGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error message");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+

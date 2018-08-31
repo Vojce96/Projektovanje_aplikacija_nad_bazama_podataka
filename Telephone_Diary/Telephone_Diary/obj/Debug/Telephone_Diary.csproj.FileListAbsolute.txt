@@ -1,0 +1,10 @@
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\bin\Debug\Telephone_Diary.exe.config
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\bin\Debug\Telephone_Diary.exe
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\bin\Debug\Telephone_Diary.pdb
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.csprojResolveAssemblyReference.cache
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.Phone.resources
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.Properties.Resources.resources
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.csproj.GenerateResource.cache
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.csproj.CoreCompileInputs.cache
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.exe
+C:\Users\vojar\OneDrive\Desktop\Projekat apdb\Telephone_Diary\Telephone_Diary\obj\Debug\Telephone_Diary.pdb
